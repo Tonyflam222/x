@@ -1,0 +1,82 @@
+{
+  "name": "@elizaos/plugin-openchat",
+  "version": "1.0.0",
+  "description": "OpenChat integration plugin for ElizaOS agents",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "elizaos-plugin",
+    "openchat",
+    "blockchain",
+    "chat",
+    "bot",
+    "internet-computer"
+  ],
+  "author": "ElizaOS Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elizaos/openchat-plugin.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@elizaos/core": "latest",
+    "ws": "^8.16.0",
+    "node-fetch": "^3.3.2",
+    "form-data": "^4.0.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "@types/ws": "^8.5.10",
+    "@types/uuid": "^9.0.8",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2"
+  },
+  "peerDependencies": {
+    "@elizaos/core": "*"
+  },
+  "agentConfig": {
+    "actions": [
+      "SEND_MESSAGE_OPENCHAT",
+      "SEND_IMAGE_OPENCHAT",
+      "SEND_VIDEO_OPENCHAT",
+      "SEND_AUDIO_OPENCHAT",
+      "SEND_FILE_OPENCHAT",
+      "SEND_POLL_OPENCHAT",
+      "CREATE_CHANNEL_OPENCHAT",
+      "DELETE_CHANNEL_OPENCHAT",
+      "INVITE_MEMBERS_OPENCHAT",
+      "REMOVE_MEMBERS_OPENCHAT",
+      "GET_CHAT_DETAILS_OPENCHAT"
+    ],
+    "providers": [
+      "OPENCHAT_MESSAGE_PROVIDER"
+    ],
+    "services": [
+      "OPENCHAT_SERVICE"
+    ],
+    "evaluators": [],
+    "models": [
+      "gpt-4",
+      "gpt-3.5-turbo",
+      "claude-3-sonnet",
+      "claude-3-haiku"
+    ]
+  }
+}
