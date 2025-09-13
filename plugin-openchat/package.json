@@ -1,0 +1,39 @@
+{
+  "name": "@elizaos/plugin-openchat",
+  "version": "1.0.0",
+  "description": "OpenChat plugin for ElizaOS agents to interact with OpenChat platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "elizaos",
+    "plugin",
+    "openchat",
+    "internet-computer",
+    "blockchain",
+    "chat",
+    "bot"
+  ],
+  "author": "ElizaOS Community",
+  "license": "MIT",
+  "dependencies": {
+    "@elizaos/core": "^1.0.0",
+    "@dfinity/agent": "^1.0.0",
+    "@dfinity/principal": "^1.0.0",
+    "@dfinity/candid": "^1.0.0",
+    "ws": "^8.14.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "@elizaos/core": "^1.0.0"
+  }
+}
